@@ -21,7 +21,7 @@ const config = {
         edge: 'rtmp://live.twitch.tv/app/live_1238068816_utEriRNJTUAlQSmD4iwQhgjSeGbV3q'
       }
     ]
-  }O
+  }
 };
 
 var nms = new NodeMediaServer(config);
