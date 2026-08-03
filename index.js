@@ -9,7 +9,8 @@ const config = {
     ping_timeout: 60
   },
   http: {
-    port: 10000,
+    // Render assigns the port dynamically. process.env.PORT ensures it binds correctly!
+    port: process.env.PORT || 10000,
     allow_origin: '*'
   },
   relay: {
@@ -18,7 +19,8 @@ const config = {
       {
         app: 'live',
         mode: 'push',
-        edge: 'rtmp://live.twitch.tv/app/live_1238068816_utEriRNJTUAlQSmD4iwQhgjSeGbV3q'
+        // Replacing the hardcoded key with 'name' allows your dynamic key from Moblin/OBS to pass through
+        edge: 'rtmp://live.twitch.tv/app/'
       }
     ]
   }
